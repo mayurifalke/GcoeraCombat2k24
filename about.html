@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMBAT IMAGE Gallery</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <style>
+        .button {
+  background-color: #f3faf7; /* Green */
+  border: none;
+  color: rgb(18, 17, 17);
+  padding: 15px 32px;
+  text-align: center;
+  margin-left: 10px;
+  
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 12px;
+}
+
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+  
+    <a href="index.html"><button class="button button1">🡄</button></a>
+    <div class="gallery" onclick="openLightbox(event)">
+        <img src="p1.jpg"
+            alt="Image 1">
+        <img src="p2.jpg"
+            alt="Image 2">
+        <img src="p3.jpg"
+            alt="Image 3">
+        <img src="p4.jpg"
+            alt="Image 4">
+        
+    </div>
+    <div class="gallery" onclick="openLightbox(event)">
+        <img src="p5.jpg"
+            alt="Image 1">
+        <img src="p6.jpg"
+            alt="Image 2">
+        <img src="p7.jpg"
+            alt="Image 3">
+        <img src="p8.jpg"
+            alt="Image 4">
+        
+    </div>
+    
+
+    <!-- Lightbox container -->
+    <div id="lightbox">
+        <!-- Close button -->
+        <span id="close-btn" onclick="closeLightbox()">&times;</span>
+
+        <!-- Main lightbox image -->
+        <img id="lightbox-img" src="" alt="lightbox image">
+
+        <!-- Thumbnails container -->
+        <div id="thumbnail-container">
+            <!-- Thumbnails will be added dynamically using JavaScript -->
+        </div>
+
+        <!-- Previous and Next buttons -->
+        <button id="prev-btn" onclick="changeImage(-1)">&lt; Prev</button>
+        <button id="next-btn" onclick="changeImage(1)">Next &gt;</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
